@@ -1,0 +1,23 @@
+{
+  "name": "adventitune",
+  "version": "0.1.0",
+  "description": "A music streaming and download app for the SDA community in Uganda and East Africa",
+  "private": true,
+  "author": "Elijah Kayongo <elijah-codes898>",
+  "license": "MIT",
+  "workspaces": [
+    "mobile",
+    "backend"
+  ],
+  "scripts": {
+    "mobile": "cd mobile && expo start",
+    "backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run mobile\" \"npm run backend\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0"
+  }
+}
